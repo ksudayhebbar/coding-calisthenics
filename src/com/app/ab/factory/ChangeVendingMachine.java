@@ -21,7 +21,6 @@ public class ChangeVendingMachine {
 		for (Integer money : cash) {
 			moneyBag.add(money);
 		}
-
 	}
 
 	public boolean vendingMachine(int amount) {
@@ -111,30 +110,29 @@ public class ChangeVendingMachine {
 	}
 
 	private void printCoins(int[] tempArray) {
-	/*	for (int i = 0; i < tempArray.length - 1; i++) {
-
-			// to stop my array from printing out any non-denominator coins e.g
-			if (tempArray[i] > 0) {
-				System.out.print(tempArray[i] + ": ");
-			}
-			
-			 * if (tempArray[i] != 0) { System.out.println("\n"); }
-			 
-		}
-*/
+		/*
+		 * for (int i = 0; i < tempArray.length - 1; i++) {
+		 * 
+		 * // to stop my array from printing out any non-denominator coins e.g
+		 * if (tempArray[i] > 0) { System.out.print(tempArray[i] + ": "); }
+		 * 
+		 * if (tempArray[i] != 0) { System.out.println("\n"); }
+		 * 
+		 * }
+		 */
 	}
 
 	public static void main(String[] args) {
-		
 		Random generator = new Random();
-		List<Integer> inti=new ArrayList<Integer>();
-		for (int i = 0; i <1000; i++) {
-			inti.add( generator.nextInt(200));
+		List<Integer> inti = new ArrayList<Integer>();
+		for (int i = 0; i < 1000; i++) {
+			inti.add(generator.nextInt(200));
 		}
-		
-		ChangeVendingMachine changeVendingMachine = new ChangeVendingMachine(inti);
-		boolean b=changeVendingMachine.vendingMachine(100);
-		System.out.println( "suscsfully return the coin "+ b);
+
+		ChangeVendingMachine changeVendingMachine = new ChangeVendingMachine(
+				inti);
+		boolean b = changeVendingMachine.vendingMachine(100);
+		System.out.println("suscsfully return the coin " + b);
 		changeVendingMachine.vendingMachine(2);
 	}
 }
